@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Data;
 
-namespace Clock
+namespace Clock.Views.Converters
 {
     public class MinuteSecondToAngleConverter : IValueConverter
     {

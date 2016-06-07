@@ -4,7 +4,7 @@ using System.Timers;
 using System.Windows;
 using System.Windows.Threading;
 
-namespace Clock
+namespace Clock.Models
 {
     public class ClockModel : INotifyPropertyChanged
     {

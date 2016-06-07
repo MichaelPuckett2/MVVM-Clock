@@ -1,13 +1,13 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:Clock"
+                    xmlns:Converters="clr-namespace:Clock.Views.Converters"
                     xmlns:System="clr-namespace:System;assembly=mscorlib">
 
-    <local:PercentageOfDoubleConverter x:Key="PercentageOfDoubleConverter" />
+    <Converters:PercentageOfDoubleConverter x:Key="PercentageOfDoubleConverter" />
 
-    <local:MinuteSecondToAngleConverter x:Key="MinuteSecondToAngleConverter" />
+    <Converters:MinuteSecondToAngleConverter x:Key="MinuteSecondToAngleConverter" />
 
-    <local:HourToAngleConverter x:Key="HourToAngleConverter" />
+    <Converters:HourToAngleConverter x:Key="HourToAngleConverter" />
 
     <System:Double x:Key="ClockSize">325</System:Double>
 

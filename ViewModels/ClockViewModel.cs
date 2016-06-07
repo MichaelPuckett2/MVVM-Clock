@@ -1,6 +1,7 @@
-﻿using System.ComponentModel;
+﻿using Clock.Models;
+using System.ComponentModel;
 
-namespace Clock
+namespace Clock.ViewModels
 {
     public class ClockViewModel : INotifyPropertyChanged
     {
