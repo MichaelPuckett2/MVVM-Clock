@@ -1,0 +1,16 @@
+c:\users\micha\documents\visual studio 2015\Projects\Clock\bin\Debug\Clock.exe
+c:\users\micha\documents\visual studio 2015\Projects\Clock\bin\Debug\Clock.pdb
+c:\users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\MainWindow.g.cs
+c:\users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\App.g.cs
+c:\users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\Clock_MarkupCompile.cache
+c:\users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\Clock_MarkupCompile.lref
+c:\users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\MainWindow.baml
+c:\users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\Clock.g.resources
+c:\users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\Clock.Properties.Resources.resources
+c:\users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\Clock.csproj.GenerateResource.Cache
+c:\users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\Clock.exe
+c:\users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\Clock.pdb
+c:\users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\GeneratedInternalTypeHelper.g.cs
+c:\users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\App.baml
+c:\users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\ClockStyles.baml
+c:\users\micha\documents\visual studio 2015\Projects\Clock\bin\Debug\Clock.exe.config
