@@ -14,3 +14,20 @@ C:\Users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\Views\MainW
 C:\Users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\Clock.g.resources
 C:\Users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\Clock.Properties.Resources.resources
 C:\Users\micha\documents\visual studio 2015\Projects\Clock\obj\Debug\Clock.csproj.GenerateResource.Cache
+C:\Users\micha\Repos\MVVM-Clock\bin\Debug\Clock.exe.config
+C:\Users\micha\Repos\MVVM-Clock\bin\Debug\Clock.exe
+C:\Users\micha\Repos\MVVM-Clock\bin\Debug\Clock.pdb
+C:\Users\micha\Repos\MVVM-Clock\obj\Debug\Clock.csprojResolveAssemblyReference.cache
+C:\Users\micha\Repos\MVVM-Clock\obj\Debug\Views\MainWindow.g.cs
+C:\Users\micha\Repos\MVVM-Clock\obj\Debug\App.g.cs
+C:\Users\micha\Repos\MVVM-Clock\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\micha\Repos\MVVM-Clock\obj\Debug\Clock_MarkupCompile.cache
+C:\Users\micha\Repos\MVVM-Clock\obj\Debug\Clock_MarkupCompile.lref
+C:\Users\micha\Repos\MVVM-Clock\obj\Debug\App.baml
+C:\Users\micha\Repos\MVVM-Clock\obj\Debug\Views\Styles\ClockStyles.baml
+C:\Users\micha\Repos\MVVM-Clock\obj\Debug\Views\MainWindow.baml
+C:\Users\micha\Repos\MVVM-Clock\obj\Debug\Clock.g.resources
+C:\Users\micha\Repos\MVVM-Clock\obj\Debug\Clock.Properties.Resources.resources
+C:\Users\micha\Repos\MVVM-Clock\obj\Debug\Clock.csproj.GenerateResource.Cache
+C:\Users\micha\Repos\MVVM-Clock\obj\Debug\Clock.exe
+C:\Users\micha\Repos\MVVM-Clock\obj\Debug\Clock.pdb

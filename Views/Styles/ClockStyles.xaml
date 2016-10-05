@@ -11,8 +11,22 @@
 
     <System:Double x:Key="ClockSize">325</System:Double>
 
-    <SolidColorBrush x:Key="ClockBackgroundColor"
-                     Color="CornflowerBlue" />
+    <LinearGradientBrush x:Key="ClockBackgroundColor">
+        <GradientStop Color="#FF7BC3FF" />
+        <GradientStop Color="#FF406B8F"
+                      Offset="1" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ClockGlassColor">
+        <GradientStop Color="#1EFFFFFF"
+                      Offset="0.218" />
+        <GradientStop Color="#1EFFFFFF"
+                      Offset="0.51" />
+        <GradientStop Offset="0.104" />
+        <GradientStop Offset="0.275" />
+        <GradientStop Offset="0.40" />
+        <GradientStop Offset="0.57" />
+    </LinearGradientBrush>
 
     <Style x:Key="HourHandStyle"
            TargetType="{x:Type ContentControl}">
@@ -74,25 +88,36 @@
                      Width="{Binding ActualHeight, Mode=OneWay, RelativeSource={RelativeSource Self}}" />
 
             <ContentControl Style="{StaticResource HourHandStyle}">
-                <Rectangle Width="3"
+                <Rectangle Width="7"
                            Height="{Binding ConverterParameter=35, Converter={StaticResource PercentageOfDoubleConverter}, Mode=OneWay, Source={StaticResource ClockSize}}"
                            Fill="Black"
-                           VerticalAlignment="Bottom" />
+                           VerticalAlignment="Bottom"
+                           RadiusX="7"
+                           RadiusY="7" />
             </ContentControl>
 
             <ContentControl Style="{StaticResource MinuteHandStyle}">
-                <Rectangle Width="2"
+                <Rectangle Width="3"
                            Height="{Binding ConverterParameter=47, Converter={StaticResource PercentageOfDoubleConverter}, Mode=OneWay, Source={StaticResource ClockSize}}"
                            Fill="Black"
-                           VerticalAlignment="Bottom" />
+                           VerticalAlignment="Bottom"
+                           RadiusX="7"
+                           RadiusY="7" />
             </ContentControl>
 
             <ContentControl Style="{StaticResource SecondHandStyle}">
                 <Rectangle Width="1"
                            Height="{Binding ConverterParameter=47, Converter={StaticResource PercentageOfDoubleConverter}, Mode=OneWay, Source={StaticResource ClockSize}}"
                            Fill="Black"
-                           VerticalAlignment="Bottom" />
+                           VerticalAlignment="Bottom"
+                           RadiusX="7"
+                           RadiusY="7" />
             </ContentControl>
+
+            <Ellipse Grid.RowSpan="2"
+                     Margin="3"
+                     Fill="{StaticResource ClockGlassColor}"
+                     Width="{Binding ActualHeight, Mode=OneWay, RelativeSource={RelativeSource Self}}" />
 
         </Grid>
     </ControlTemplate>
