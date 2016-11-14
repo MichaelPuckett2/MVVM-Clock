@@ -7,6 +7,8 @@
 
     <Converters:MinuteSecondToAngleConverter x:Key="MinuteSecondToAngleConverter" />
 
+    <Converters:MillisecondToAngleConverter x:Key="MillisecondToAngleConverter" />
+
     <Converters:HourToAngleConverter x:Key="HourToAngleConverter" />
 
     <System:Double x:Key="ClockSize">325</System:Double>
@@ -76,6 +78,22 @@
         </Setter>
     </Style>
 
+    <Style x:Key="MillisecondHandStyle"
+           TargetType="{x:Type ContentControl}">
+        <Setter Property="RenderTransformOrigin"
+                Value="0.5, 1" />
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="{Binding Millisecond, Converter={StaticResource MillisecondToAngleConverter}}" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <ControlTemplate x:Key="ClockTemplate">
         <Grid Height="{StaticResource ClockSize}">
             <Grid.RowDefinitions>
@@ -113,6 +131,15 @@
                            RadiusX="7"
                            RadiusY="7" />
             </ContentControl>
+
+            <!--<ContentControl Style="{StaticResource MillisecondHandStyle}">
+                <Rectangle Width="1"
+                           Height="{Binding ConverterParameter=47, Converter={StaticResource PercentageOfDoubleConverter}, Mode=OneWay, Source={StaticResource ClockSize}}"
+                           Fill="Black"
+                           VerticalAlignment="Bottom"
+                           RadiusX="7"
+                           RadiusY="7" />
+            </ContentControl>-->
 
             <Ellipse Grid.RowSpan="2"
                      Margin="3"

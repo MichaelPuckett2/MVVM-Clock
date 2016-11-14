@@ -68,6 +68,7 @@
     <Compile Include="Models\ClockModel.cs" />
     <Compile Include="ViewModels\ClockViewModel.cs" />
     <Compile Include="Views\Converters\HourToAngleConverter.cs" />
+    <Compile Include="Views\Converters\MillisecondToAngleConverter.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

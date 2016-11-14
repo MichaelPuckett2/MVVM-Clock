@@ -8,6 +8,7 @@ namespace Clock.ViewModels
         private int hour;
         private int minute;
         private int second;
+        private int millisecond;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -21,9 +22,11 @@ namespace Clock.ViewModels
                     Hour = time.Hour;
                     Minute = time.Minute;
                     Second = time.Second;
+                    Millisecond = time.Millisecond;
                 }
             };
         }
+
         public int Hour
         {
             get { return hour; }
@@ -51,6 +54,16 @@ namespace Clock.ViewModels
             {
                 second = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Second)));
+            }
+        }
+
+        public int Millisecond
+        {
+            get { return millisecond; }
+            set
+            {
+                millisecond = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Millisecond)));
             }
         }
     }

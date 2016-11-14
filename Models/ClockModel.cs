@@ -6,30 +6,23 @@ using System.Windows.Threading;
 
 namespace Clock.Models
 {
-    public class ClockModel : INotifyPropertyChanged
+    public class ClockModel : INotifyPropertyChanged, IDisposable
     {
-        private volatile bool isTimerActive;
         private static ClockModel thisModel => new ClockModel();
+        private Timer timer = new Timer(200);
+
         public static ClockModel GetInstance() => thisModel;
 
         private ClockModel()
         {
-            Application.Current.Exit += (s, e) => isTimerActive = false;
+            Application.Current.Exit += (s, e) => Dispose();
             InitializeClockTimer();
         }
 
         private void InitializeClockTimer()
         {
-            var timer = new Timer(200);
-
             timer.Elapsed += (s, e) =>
             {
-                if (!isTimerActive)
-                {
-                    timer.Stop();
-                    timer.Dispose();
-                    return;
-                }
 
                 if (Application.Current != null)
                     try
@@ -41,15 +34,17 @@ namespace Clock.Models
                     }
                     catch { }
             };
-
-            isTimerActive = true;
             timer.Start();
+        }
+
+        public void Dispose()
+        {
+            timer.Stop();
+            timer.Dispose();
         }
 
         public DateTime CurrentTime => DateTime.Now;
 
         public event PropertyChangedEventHandler PropertyChanged;
-
-        ~ClockModel() { isTimerActive = false; }
     }
 }

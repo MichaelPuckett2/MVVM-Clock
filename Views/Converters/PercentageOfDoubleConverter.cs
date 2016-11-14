@@ -8,22 +8,22 @@ namespace Clock.Views.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (!(value is double))
+            if (value is double)
+            {
+                double percent;
+
+                if (!double.TryParse(parameter.ToString(), out percent))
+                    return value;
+
+                percent = percent / 100;
+
+                return (double)value * percent;
+            }
+            else
                 return value;
-
-            double percent;
-
-            if (!double.TryParse(parameter.ToString(), out percent))
-                return value;
-
-            percent = percent / 100;
-
-            return (double)value * percent;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            throw new NotImplementedException();
-        }
+            => Binding.DoNothing;
     }
 }
