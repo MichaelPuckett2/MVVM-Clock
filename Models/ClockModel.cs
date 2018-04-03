@@ -1,4 +1,6 @@
-﻿using System;
+
+
+using System;
 using System.ComponentModel;
 using System.Timers;
 using System.Windows;
@@ -42,6 +44,8 @@ namespace Clock.Models
             timer.Stop();
             timer.Dispose();
         }
+        
+        ~ClockModel() => Dispose();
 
         public DateTime CurrentTime => DateTime.Now;
 
