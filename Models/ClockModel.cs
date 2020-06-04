@@ -10,10 +10,10 @@ namespace Clock.Models
 {
     public class ClockModel : INotifyPropertyChanged, IDisposable
     {
-        private static ClockModel thisModel => new ClockModel();
-        private Timer timer = new Timer(200);
+        private static ClockModel ThisModel => new ClockModel();
+        private readonly Timer timer = new Timer(200);
 
-        public static ClockModel GetInstance() => thisModel;
+        public static ClockModel GetInstance() => ThisModel;
 
         private ClockModel()
         {
@@ -39,16 +39,16 @@ namespace Clock.Models
             timer.Start();
         }
 
+        public DateTime CurrentTime => DateTime.Now;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public void Dispose()
         {
             timer.Stop();
             timer.Dispose();
         }
-        
+
         ~ClockModel() => Dispose();
-
-        public DateTime CurrentTime => DateTime.Now;
-
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
